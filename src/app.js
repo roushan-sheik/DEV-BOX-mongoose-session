@@ -1,15 +1,15 @@
 const express = require("express");
 require("dotenv").config();
 const mongoose = require("mongoose");
-const booksRoute = require( "./routes/book/book.route.js" );
-const userRoute = require("./routes/users/user.route.js")
+const postRoute = require("./routes/post/post.route");
+const userRoute = require("./routes/users/user.route.js");
 
 // middlware
 const app = express();
 app.use(express.json());
 
 app.use("/api/v1/users", userRoute);
-// app.use("/api/v1/test ", booksRoute);
+app.use("/api/v1/post", postRoute);
 
 // routes
 app.get("/", (req, res) => {
