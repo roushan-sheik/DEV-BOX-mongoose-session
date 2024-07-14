@@ -2,7 +2,8 @@ const express = require("express");
 require("dotenv").config();
 const mongoose = require("mongoose");
 const postRoute = require("./routes/post/post.route.js");
-const userRoute = require("./routes/users/user.route.js");
+const userRoute = require( "./routes/users/user.route.js" );
+const commentRoute = require("./routes/comment/comment.js")
 
 // middlware
 const app = express();
@@ -10,6 +11,7 @@ app.use(express.json());
 
 app.use("/api/v1/users", userRoute);
 app.use("/api/v1/post", postRoute);
+app.use("/api/v1/comment", commentRoute);
 
 // Home route
 app.get("/", (req, res) => {
