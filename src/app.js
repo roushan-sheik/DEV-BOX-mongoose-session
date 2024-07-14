@@ -5,10 +5,11 @@ const postRoute = require("./routes/post/post.route.js");
 const userRoute = require( "./routes/users/user.route.js" );
 const commentRoute = require("./routes/comment/comment.js")
 
-// middlware
+// middleware
 const app = express();
 app.use(express.json());
 
+// application route
 app.use("/api/v1/users", userRoute);
 app.use("/api/v1/post", postRoute);
 app.use("/api/v1/comment", commentRoute);
