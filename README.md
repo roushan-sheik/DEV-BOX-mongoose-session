@@ -12,7 +12,15 @@
 
 ## Day 2 live link:
 
-- https://www.youtube.com/watch?v=68TsyVWYYAs&list=PLgebUyyvPlDk3H4XrjNaXr67oXFiZqmqa&index=5
+### Part - 1
+
+- https://drive.google.com/file/d/10vlM39x_a4EsovRqqUT6fBUm3VZafMXv/view
+
+## Day 2 live link:
+
+### Part - 2
+
+- https://drive.google.com/file/d/10Y8M6HxJTIKMi9StOioFYpW1vFX0R9c8/view
 
 ## Day 3 live link
 
