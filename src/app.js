@@ -1,7 +1,7 @@
 const express = require("express");
 require("dotenv").config();
 const mongoose = require("mongoose");
-const postRoute = require("./routes/post/post.route");
+const postRoute = require("./routes/post/post.route.js");
 const userRoute = require("./routes/users/user.route.js");
 
 // middlware
@@ -11,11 +11,11 @@ app.use(express.json());
 app.use("/api/v1/users", userRoute);
 app.use("/api/v1/post", postRoute);
 
-// routes
+// Home route
 app.get("/", (req, res) => {
   res.send("Blog app Home");
 });
-// routes
+// health route
 app.get("/health", (req, res) => {
   res.status(200).send({ health: "Health is Good" });
 });
@@ -32,6 +32,7 @@ connectionUrl = connectionUrl.replace(
 );
 connectionUrl = `${connectionUrl}/${process.env.DB_NAME}?${process.env.QUERY_STRING}`;
 
+// port
 const port = process.env.PORT || 5000;
 
 async function main() {
@@ -40,9 +41,9 @@ async function main() {
     app.listen(port, () => {
       console.log(`Server is running on port: http://localhost:${port}`);
     });
-    console.log("Database connected");
+    console.log("Database Connected");
   } catch (error) {
-    console.log("Database connection faild");
+    console.log("Database connection fail");
   }
 }
 main();

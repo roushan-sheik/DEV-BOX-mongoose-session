@@ -5,7 +5,7 @@ const {
   getSinglePost,
   updatePost,
   deletePost,
-} = require("../../controller/post-controller/post.controller.js");
+} = require("../../controller/post/post.controller.js");
 
 const route = express.Router();
 
